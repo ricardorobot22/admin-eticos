@@ -1,0 +1,48 @@
+{
+  "name": "adminecotor",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "server": "node server.js"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.13.3",
+    "@emotion/styled": "^11.13.0",
+    "@hello-pangea/dnd": "^17.0.0",
+    "@mui/icons-material": "^6.1.6",
+    "@mui/material": "^6.1.6",
+    "@mui/x-date-pickers": "^7.22.2",
+    "@react-spring/web": "^9.7.5",
+    "axios": "^1.7.7",
+    "dayjs": "^1.11.13",
+    "express": "^4.21.1",
+    "jquery": "^3.7.1",
+    "jwt-decode": "^4.0.0",
+    "moment": "^2.30.1",
+    "moment-timezone": "^0.5.46",
+    "papaparse": "^5.4.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-dropzone": "^14.3.5",
+    "react-router-dom": "^6.28.0",
+    "sortablejs": "^1.15.3"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.13.0",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.3",
+    "eslint": "^9.13.0",
+    "eslint-plugin-react": "^7.37.2",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "eslint-plugin-react-refresh": "^0.4.14",
+    "globals": "^15.11.0",
+    "serve": "^14.2.4",
+    "vite": "^5.4.10"
+  }
+}

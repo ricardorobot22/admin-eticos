@@ -1,0 +1,76 @@
+.Avatar-Simbol {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    padding: 8px 0px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    background: var(--primary-background-light-ecf-4-fc, #ECF4FC);
+    color: #1C58B7;
+}
+
+.avatar-name {
+    color: var(--gray-700101828, #101828);
+
+    /* Text-xs/Semibold */
+    font-family: Poppins;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 16px;
+    /* 133.333% */
+}
+
+.Logo-Eticos {
+    display: flex;
+    padding: 0px 16px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    align-self: stretch;
+    padding-top: 32px;
+
+}
+
+.drawer {
+    width:240px;
+    /* Si tienes una variable, o reemplázalo con un valor específico */
+    flex-shrink: 0;
+}
+
+.drawer .MuiDrawer-paper {
+    width: 240px;
+    /* Si usas una variable, de lo contrario coloca el valor */
+    box-sizing: border-box;
+}
+
+.dropdown-label{
+    display: flex;
+align-items: flex-start;
+align-self: stretch;
+}
+
+.select-drogueria{
+    border-radius: 8px;
+
+}
+
+
+.stack-container {
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  .avatar-icon {
+    width: 24px;
+height: 24px;
+flex-shrink: 0;
+  }
+
+
+
+
