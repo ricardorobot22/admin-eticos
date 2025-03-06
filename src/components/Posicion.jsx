@@ -804,24 +804,28 @@ const formatDate = (type, date) => {
 const noErrorParse = (data) => {
   if (!data || data === "") return {};
 
-  let parsedData = {};
-
   try {
-    // Intenta parsear los datos
-    parsedData = JSON.parse(data);
+    // Si `data` ya es un objeto, lo retornamos directamente
+    if (typeof data === "object") {
+      return data;
+    }
 
-    // Verificamos si el resultado es una cadena en lugar de un objeto
+    // Si es un string, intentamos parsearlo
+    const parsedData = JSON.parse(data);
+
+    // Si el resultado del parseo es una cadena o "ninguna", retornamos un objeto vacío
     if (typeof parsedData === "string" || parsedData === "ninguna") {
       console.warn("Se detectó una cadena inválida, devolviendo un objeto vacío:", parsedData);
-      return {};  // Devolver un objeto vacío si es una cadena no deseada
+      return {};
     }
+
+    return parsedData; // Retornamos el objeto JSON correctamente parseado
 
   } catch (e) {
     console.error("Error al parsear los datos:", e, data);
     return {};  // Si falla el parseo, devolvemos un objeto vacío
   }
-
-  return parsedData;
 };
+
 
 export { EnhancedPosicion, EnhancedPosicionToolbar };

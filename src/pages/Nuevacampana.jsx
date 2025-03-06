@@ -298,7 +298,14 @@ function Nuevacampana() {
 
   useEffect(() => {
     if (formData.data) {
-      const data = JSON.parse(formData.data);
+      let data;
+      try {
+          data = typeof formData.data === "string" ? JSON.parse(formData.data) : formData.data;
+      } catch (error) {
+          console.error("Error al parsear JSON:", error);
+          data = {}; // Evita que la aplicación se rompa
+      }
+    
 
       setFormData(prevFormData => ({
         ...prevFormData,

@@ -738,22 +738,28 @@ const formatDate = (type, date) => {
 };
 
 const noErrorParse = (data) => {
-    if (!data || data === "") return {};
+  if (!data || data === "") return {};
 
-    let parsedData = {};
+  try {
+      // Si `data` ya es un objeto, lo retornamos directamente
+      if (typeof data === "object") {
+          return data;
+      }
 
-    try {
-        parsedData = JSON.parse(data);
+      // Si `data` es un string, intentamos parsearlo
+      const parsedData = JSON.parse(data);
 
-        if (typeof parsedData === "string" || parsedData === "ninguna") {
-            return {}; 
-        }
+      // Si el resultado es una cadena o "ninguna", retornamos un objeto vacío
+      if (typeof parsedData === "string" || parsedData === "ninguna") {
+          return {};
+      }
 
-    } catch (e) {
-        return {}; 
-    }
+      return parsedData; // Retornamos el objeto correctamente parseado
 
-    return parsedData;
+  } catch (e) {
+      return {};  // Si `JSON.parse()` falla, retornamos un objeto vacío
+  }
 };
+
 
 export { EnhancedPopup, EnhancedPopupToolbar };
